@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="text-center mb-5">
+    <h1>Identity Verification System</h1>
+    <p class="lead">AI-Powered OCR for Pakistani Identity Documents</p>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      
+      <app-upload (dataExtracted)="onDataExtracted($event)"></app-upload>
+
+      <app-review *ngIf="extractedData" [data]="extractedData"></app-review>
+
+    </div>
+  </div>
+</div>
